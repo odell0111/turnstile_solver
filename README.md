@@ -82,6 +82,7 @@ print("Token:", token)
 ```
 
 ## Donate
-[![Donate](https://app.oxapay.com/media/btn/light-btn.png)](https://oxapay.com/donate/42319117)
 
-[//]: # (<a href="https://oxapay.com/donate/42319117" target="_blank"> <img src="https://app.oxapay.com/media/btn/light-btn.png" style="width: 185px"> </a>)
+[//]: # ([![Donate]&#40;https://app.oxapay.com/media/btn/light-btn.png&#41;]&#40;https://oxapay.com/donate/42319117&#41;)
+
+<a href="https://oxapay.com/donate/42319117" target="_blank"> <img src="https://app.oxapay.com/media/btn/light-btn.png" style="width: 200px"> </a>
