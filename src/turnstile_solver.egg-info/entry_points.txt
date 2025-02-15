@@ -1,0 +1,2 @@
+[console_scripts]
+solver = turnstile_solver:main_cli

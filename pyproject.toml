@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools >= 75.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+#dynamic = ["version"]
+dynamic = ["dependencies"]
+name = "turnstile_solver"
+version = "0.1b"
+description = "Automatically solve Cloudflare Turnstile captcha"
+readme = "README.md"
+authors = [{ name = "OGM" }]
+#license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+# keywords = [ ]
+
+requires-python = ">=3.11"
+
+[project.urls]
+Repository = "https://github.com/odell0111/turnstile_solver"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+#[tool.setuptools]
+#py-modules = []
+
+[project.scripts]
+solver = "turnstile_solver:main_cli"
+
+# [tool.setuptools]
+# ...
+# By default, include-package-data is true in pyproject.toml, so you do
+# NOT have to specify this line.
+# include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

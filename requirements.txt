@@ -1,0 +1,11 @@
+pytest
+rich
+asyncio
+argparse
+rich_argparse
+patchright
+Quart
+Faker
+pyngrok
+requests
+python-dotenv
