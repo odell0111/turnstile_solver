@@ -296,9 +296,15 @@ class TurnstileSolver:
     browser: Browser | None = await playwright.chromium.launch(
       executable_path=self.browser_executable_path,
       # channel=channel,
-      args=self.browser_args,
       headless=self.headless,
       proxy=proxy.dict() if proxy else None,
+      args=[
+          "--no-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-setuid-sandbox",
+          "--disable-software-rasterizer",
+          *self.browser_args,
+      ]
     )
     return browser, playwright
 
