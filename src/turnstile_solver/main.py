@@ -18,15 +18,15 @@ from rich.console import Group
 from rich.text import Text
 from multiprocessing import Process
 
-from . import constants as c
-from .proxy import Proxy
-from .proxy_provider import ProxyProvider
-from .custom_rich_help_formatter import CustomRichHelpFormatter
-from .solver_console import SolverConsole
-from .solver_console_highlighter import SolverConsoleHighlighter
-from .solver import TurnstileSolver
-from .utils import init_logger, simulate_intensive_task, get_file_handler, load_proxy_param
-from .turnstile_solver_server import TurnstileSolverServer
+from turnstile_solver import constants as c
+from turnstile_solver.proxy import Proxy
+from turnstile_solver.proxy_provider import ProxyProvider
+from turnstile_solver.custom_rich_help_formatter import CustomRichHelpFormatter
+from turnstile_solver.solver_console import SolverConsole
+from turnstile_solver.solver_console_highlighter import SolverConsoleHighlighter
+from turnstile_solver.solver import TurnstileSolver
+from turnstile_solver.utils import init_logger, simulate_intensive_task, get_file_handler, load_proxy_param
+from turnstile_solver.turnstile_solver_server import TurnstileSolverServer
 
 _console = SolverConsole()
 
