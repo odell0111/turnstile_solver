@@ -1,0 +1,17 @@
+services:
+  solver:
+    container_name: solver
+    hostname: solver
+    build:
+      context: .
+      dockerfile: ./.docker/services/turnstile/solver.Dockerfile
+    restart: always
+    ports:
+      - 8088:8088
+    networks:
+      - solver
+
+networks:
+  solver:
+    name: solver
+    driver: bridge
