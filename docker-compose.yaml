@@ -1,6 +1,7 @@
 services:
   solver:
     container_name: solver
+    image: turnstile_solver
     hostname: solver
     build:
       context: .
