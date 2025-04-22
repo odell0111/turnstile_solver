@@ -5,12 +5,12 @@ from pathlib import Path
 from typing import Callable, Awaitable
 from patchright.async_api import async_playwright, Page, BrowserContext, Browser, Playwright
 
-from . import constants as c
-from .enums import CaptchaApiMessageEvent
-from .proxy import Proxy
-from .solver_console import SolverConsole
-from .turnstile_result import TurnstileResult
-from .turnstile_solver_server import TurnstileSolverServer, CAPTCHA_EVENT_CALLBACK_ENDPOINT
+from turnstile_solver import constants as c
+from turnstile_solver.enums import CaptchaApiMessageEvent
+from turnstile_solver.proxy import Proxy
+from turnstile_solver.solver_console import SolverConsole
+from turnstile_solver.turnstile_result import TurnstileResult
+from turnstile_solver.turnstile_solver_server import TurnstileSolverServer, CAPTCHA_EVENT_CALLBACK_ENDPOINT
 
 logger = logging.getLogger(__name__)
 

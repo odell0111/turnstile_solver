@@ -1,8 +1,8 @@
 from rich.console import Console
 from rich.theme import Theme
 
-from .constants import CONSOLE_THEME_STYLES
-from .solver_console_highlighter import SolverConsoleHighlighter
+from turnstile_solver.constants import CONSOLE_THEME_STYLES
+from turnstile_solver.solver_console_highlighter import SolverConsoleHighlighter
 
 MAX_CONSOLE_WIDTH = 200
 

@@ -6,7 +6,7 @@ import time
 from faker import Faker
 from rich.logging import RichHandler
 
-from .solver_console import SolverConsole
+from turnstile_solver.solver_console import SolverConsole
 
 _faker = Faker(locale='en_US')
 

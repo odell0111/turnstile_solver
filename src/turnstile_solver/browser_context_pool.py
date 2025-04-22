@@ -4,13 +4,13 @@ from typing import TYPE_CHECKING
 
 from patchright.async_api import Browser
 
-from .constants import MAX_PAGES_PER_CONTEXT, MAX_CONTEXTS
-from .page_pool import PagePool
-from .pool import Pool
-from .proxy_provider import ProxyProvider
+from turnstile_solver.constants import MAX_PAGES_PER_CONTEXT, MAX_CONTEXTS
+from turnstile_solver.page_pool import PagePool
+from turnstile_solver.pool import Pool
+from turnstile_solver.proxy_provider import ProxyProvider
 
 if TYPE_CHECKING:
-  from .solver import TurnstileSolver
+  from turnstile_solver.solver import TurnstileSolver
 
 logger = logging.getLogger(__name__)
 

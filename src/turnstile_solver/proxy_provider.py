@@ -1,7 +1,7 @@
 import logging
 from pathlib import Path
 
-from .proxy import Proxy
+from turnstile_solver.proxy import Proxy
 
 logger = logging.getLogger(__name__)
 

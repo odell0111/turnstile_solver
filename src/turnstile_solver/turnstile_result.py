@@ -7,8 +7,8 @@ import asyncio
 
 from patchright.async_api import BrowserContext, Page
 
-from .enums import CaptchaApiMessageEvent
-from .utils import password
+from turnstile_solver.enums import CaptchaApiMessageEvent
+from turnstile_solver.utils import password
 
 logger = logging.getLogger(__name__)
 
