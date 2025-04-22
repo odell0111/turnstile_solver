@@ -4,8 +4,8 @@ FROM python:3.13.3
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install requirements
-RUN pip install playwright && \
-    playwright install chromium --with-deps
+RUN pip install patchright && \
+    patchright install chromium --with-deps
 
 WORKDIR /workspaceFolder
 COPY . .
@@ -14,7 +14,10 @@ RUN pip install .
 
 WORKDIR /workspaceFolder/src/turnstile_solver
 RUN echo '#!/bin/bash\n\
-    python main.py --headless --browser-args "--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-software-rasterizer"\n\
+    python main.py \
+    --headless \
+    --browser-args "--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-software-rasterizer"\
+    \n\
     exec "$@"' > /workspaceFolder/entrypoint.sh
 
 RUN chmod +x /workspaceFolder/entrypoint.sh
