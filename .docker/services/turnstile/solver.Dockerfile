@@ -14,7 +14,7 @@ RUN pip install .
 
 WORKDIR /workspaceFolder/src/turnstile_solver
 RUN echo '#!/bin/bash\n\
-    python main.py --headless\n\
+    python main.py --headless --browser-args "--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-software-rasterizer"\n\
     exec "$@"' > /workspaceFolder/entrypoint.sh
 
 RUN chmod +x /workspaceFolder/entrypoint.sh
