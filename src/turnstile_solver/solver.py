@@ -18,11 +18,13 @@ logger = logging.getLogger(__name__)
 BROWSER_ARGS = {
   "--disable-blink-features=AutomationControlled",  # avoid navigator.webdriver detection
   "--no-sandbox",
+  "--disable-setuid-sandbox",
   "--disable-dev-shm-usage",
   "--disable-background-networking",
   "--disable-background-timer-throttling",
   "--disable-backgrounding-occluded-windows",
   "--disable-renderer-backgrounding",
+  "--disable-software-rasterizer",
   '--disable-application-cache',
   '--disable-field-trial-config',
   '--export-tagged-pdf',
