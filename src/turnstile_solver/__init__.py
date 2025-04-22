@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 from turnstile_solver.solver import TurnstileSolver
 from turnstile_solver.turnstile_solver_server import TurnstileSolverServer
 from turnstile_solver.constants import HOST, PORT

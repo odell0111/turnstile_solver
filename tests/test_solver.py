@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 import logging
 import asyncio
 import os

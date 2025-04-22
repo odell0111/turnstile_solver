@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 import asyncio
 import logging
 from typing import TYPE_CHECKING

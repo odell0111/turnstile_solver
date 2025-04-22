@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 import asyncio
 
 from turnstile_solver.main import main

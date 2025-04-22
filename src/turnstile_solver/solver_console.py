@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 from rich.console import Console
 from rich.theme import Theme
 

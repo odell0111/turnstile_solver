@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 import logging
 
 from patchright.async_api import BrowserContext, Page, Route
