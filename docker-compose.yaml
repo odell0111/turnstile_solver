@@ -9,6 +9,7 @@ services:
     restart: always
     ports:
       - 8088:8088
+      - 5900:5900
     networks:
       - solver
 
