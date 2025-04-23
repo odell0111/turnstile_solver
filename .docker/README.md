@@ -9,7 +9,7 @@ Start the environment with `docker compose up --build -d`. Once the service is r
 | Port | Internal Port | What is it?      |
 | ---- | ------------- | ---------------- |
 | 8088 | 8088          | Turnstile Solver |
-| 5900 | 5900          | VNC Server       |
+| 5901 | 5901          | VNC Server       |
 
 ### Turnstile Solver
 

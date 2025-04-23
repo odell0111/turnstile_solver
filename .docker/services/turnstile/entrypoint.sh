@@ -24,7 +24,7 @@ fi
 fluxbox &
 
 # Start VNC server
-x11vnc -display :99 -forever -nopw -shared -listen 0.0.0.0 -rfbport 5900 -bg
+x11vnc -display :99 -forever -nopw -shared -listen 0.0.0.0 -rfbport 5901 -bg
 
 # Run your app
 export DISPLAY=:99

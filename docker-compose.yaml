@@ -10,7 +10,7 @@ services:
     ports:
       # Recommendation: Disable both ports in production
       - 8088:8088
-      - 5900:5900
+      - 5901:5901
     networks:
       - solver
 

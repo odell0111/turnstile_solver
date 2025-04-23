@@ -28,8 +28,5 @@ WORKDIR /workspaceFolder/src/turnstile_solver
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD xvfb-run --auto-servernum echo "Xvfb is working!" || exit 1
 
-# VNC port
-EXPOSE 5900
-
 RUN chmod +x /workspaceFolder/.docker/services/turnstile/entrypoint.sh
 ENTRYPOINT [ "/workspaceFolder/.docker/services/turnstile/entrypoint.sh" ]
