@@ -16,15 +16,10 @@ from turnstile_solver.turnstile_solver_server import TurnstileSolverServer, CAPT
 logger = logging.getLogger(__name__)
 
 BROWSER_ARGS = {
-  "--disable-blink-features=AutomationControlled",  # avoid navigator.webdriver detection
-  "--no-sandbox",
-  "--disable-setuid-sandbox",
-  "--disable-dev-shm-usage",
   "--disable-background-networking",
   "--disable-background-timer-throttling",
   "--disable-backgrounding-occluded-windows",
   "--disable-renderer-backgrounding",
-  "--disable-software-rasterizer",
   '--disable-application-cache',
   '--disable-field-trial-config',
   '--export-tagged-pdf',
@@ -65,6 +60,21 @@ BROWSER_ARGS = {
   '--password-store=basic',
   '--log-level=3',
   '--proxy-bypass-list=<-loopback>;localhost;127.0.0.1;*.local',
+
+  # Run the browser with SwiftShader and force it to accept software rendering
+  '--no-sandbox',
+  '--disable-gpu',
+  '--disable-software-rasterizer',
+  '--disable-dev-shm-usage',
+  '--disable-blink-features=AutomationControlled',  # avoid navigator.webdriver detection
+  '--disable-setuid-sandbox',
+  '--lang=en-US,en',
+  '--start-maximized',
+  '--window-size=1024,720',
+  '--enable-unsafe-webgpu',
+  '--enable-webgl',
+  '--use-gl=swiftshader',
+  '--enable-features=SharedArrayBuffer,TrustTokens,PrivateNetworkAccessChecksBypassingPermissionPolicy',
 
   # Not needed, here just for reference
   # Network/Connection Tuning
