@@ -1,9 +1,10 @@
+# -*- mode: python ; coding: utf-8 -*-
 import logging
 
 from patchright.async_api import BrowserContext, Page, Route
 from turnstile_solver.pool import Pool
 
-from .constants import MAX_PAGES_PER_CONTEXT
+from turnstile_solver.constants import MAX_PAGES_PER_CONTEXT
 
 logger = logging.getLogger(__name__)
 

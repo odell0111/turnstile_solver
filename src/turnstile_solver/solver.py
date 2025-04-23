@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 import datetime
 import logging
 import time
@@ -5,19 +6,16 @@ from pathlib import Path
 from typing import Callable, Awaitable
 from patchright.async_api import async_playwright, Page, BrowserContext, Browser, Playwright
 
-from . import constants as c
-from .enums import CaptchaApiMessageEvent
-from .proxy import Proxy
-from .solver_console import SolverConsole
-from .turnstile_result import TurnstileResult
-from .turnstile_solver_server import TurnstileSolverServer, CAPTCHA_EVENT_CALLBACK_ENDPOINT
+from turnstile_solver import constants as c
+from turnstile_solver.enums import CaptchaApiMessageEvent
+from turnstile_solver.proxy import Proxy
+from turnstile_solver.solver_console import SolverConsole
+from turnstile_solver.turnstile_result import TurnstileResult
+from turnstile_solver.turnstile_solver_server import TurnstileSolverServer, CAPTCHA_EVENT_CALLBACK_ENDPOINT
 
 logger = logging.getLogger(__name__)
 
 BROWSER_ARGS = {
-  "--disable-blink-features=AutomationControlled",  # avoid navigator.webdriver detection
-  "--no-sandbox",
-  "--disable-dev-shm-usage",
   "--disable-background-networking",
   "--disable-background-timer-throttling",
   "--disable-backgrounding-occluded-windows",
@@ -62,6 +60,21 @@ BROWSER_ARGS = {
   '--password-store=basic',
   '--log-level=3',
   '--proxy-bypass-list=<-loopback>;localhost;127.0.0.1;*.local',
+
+  # Run the browser with SwiftShader and force it to accept software rendering
+  '--no-sandbox',
+  '--disable-gpu',
+  '--disable-software-rasterizer',
+  '--disable-dev-shm-usage',
+  '--disable-blink-features=AutomationControlled',  # avoid navigator.webdriver detection
+  '--disable-setuid-sandbox',
+  '--lang=en-US,en',
+  '--start-maximized',
+  '--window-size=1024,720',
+  '--enable-unsafe-webgpu',
+  '--enable-webgl',
+  '--use-gl=swiftshader',
+  '--enable-features=SharedArrayBuffer,TrustTokens,PrivateNetworkAccessChecksBypassingPermissionPolicy',
 
   # Not needed, here just for reference
   # Network/Connection Tuning

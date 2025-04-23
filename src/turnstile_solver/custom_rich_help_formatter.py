@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 from rich.console import RenderableType
 from rich_argparse import RichHelpFormatter
 

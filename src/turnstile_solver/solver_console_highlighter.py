@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 from rich.highlighter import ReprHighlighter
 
 _ORIGINAL_NUMBER_HIGHLIGHTER = r"(?P<number>(?<!\w)\-?[0-9]+\.?[0-9]*(e[-+]?\d+?)?\b|0x[0-9a-fA-F]*)"

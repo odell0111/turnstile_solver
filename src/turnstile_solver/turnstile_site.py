@@ -1,4 +1,4 @@
-
+# -*- mode: python ; coding: utf-8 -*-
 class TurnstileSite:
   def __init__(self,
                site_key: str,

@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 from turnstile_solver.proxy_provider import ProxyProvider
 from pytest import fixture
 from rich.pretty import pprint

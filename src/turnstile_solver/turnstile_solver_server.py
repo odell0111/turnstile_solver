@@ -1,3 +1,4 @@
+# -*- mode: python ; coding: utf-8 -*-
 import logging
 import time
 from inspect import isawaitable
@@ -10,12 +11,12 @@ import asyncio
 
 from quart import Quart, Response, request
 
-from .enums import CaptchaApiMessageEvent
-from .constants import PORT, HOST, CAPTCHA_EVENT_CALLBACK_ENDPOINT, MAX_CONTEXTS, MAX_PAGES_PER_CONTEXT
-from .proxy_provider import ProxyProvider
-from .solver_console import SolverConsole
-from .constants import SECRET
-from .browser_context_pool import BrowserContextPool
+from turnstile_solver.enums import CaptchaApiMessageEvent
+from turnstile_solver.constants import PORT, HOST, CAPTCHA_EVENT_CALLBACK_ENDPOINT, MAX_CONTEXTS, MAX_PAGES_PER_CONTEXT
+from turnstile_solver.proxy_provider import ProxyProvider
+from turnstile_solver.solver_console import SolverConsole
+from turnstile_solver.constants import SECRET
+from turnstile_solver.browser_context_pool import BrowserContextPool
 
 if TYPE_CHECKING:
   from .solver import TurnstileSolver

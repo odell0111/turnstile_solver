@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Turnstile: Headless",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "turnstile_solver",
+            "args": [
+                "--headless",
+                "--port",
+                "8088"
+            ]
+        },
+        {
+            "name": "Turnstile: None-Headless",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "turnstile_solver",
+            "args": [
+                "--port",
+                "8088"
+            ]
+        }
+    ]
+}
